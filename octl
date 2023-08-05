@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+list() {        # Prints the list of commands 
+    cat $0 | grep -E '^[a-z_]+\(\)'
+}
+
+self_update() { # Updates octl to the latest version
+    cd $(dirname $(realpath octl))
+    git pull
+}
+
+CMD=$(echo ${1:-list} | tr '-' '_')
+ARGS=${@:2}
+$CMD $ARGS

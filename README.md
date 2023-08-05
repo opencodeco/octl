@@ -1,16 +1,21 @@
-# ctl
-🐚 A template for Command Line Applications using plain-old Shell Script.
+# octl
+✊ Useful tools, right in your terminal, brought to you by the OpenCodeCo.
 
 ## Getting started
 
-Make sure your script has `execute` permission:
+### Installation
+Just clone it and link to your `PATH`:
 ```shell
-chmod +x ./ctl
+git clone https://github.com/opencodeco/octl.git ~/octl
+ln -s ~/octl/octl /usr/local/bin/octl
 ```
 
-### Usage
-
-| Command | Description |
-| --- | --- |
-| `./ctl list` | List all available commands |
-| `./ctl hello-world` | Hello, World! |
+#### Updates
+Then you can just `git pull` for updates:
+```shell
+cd ~/octl && git pull
+```
+or
+```shell
+octl self-update
+```
